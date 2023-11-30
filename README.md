@@ -1,8 +1,18 @@
 # MsgTyper
 
-Prosta aplikacja przez, którą można wysylać wiadomości do innych z uzyciem UI VS Froms loginów,
+Prosta aplikacja do wysyłania wiadomości z użyciem interfejsu użytkownika w technologii Windows Forms. Aplikacja obejmuje:
 
-#aplikacja ma:
--zabezpieczenie typu login (admin, user, guest), gdzie każdy ma inne możliwosci,
--zapisuje dane1 - (kto, komu, kiedy, wiadomosc), oraz loginy (login, pass, ?clue) w json, które są zawsze dostępne,
--nw cos sie doda.
+1. Zabezpieczenia na poziomie loginu:
+* Admin: Pełen dostęp do funkcji aplikacji.
+* Użytkownik: Dostęp do podstawowych funkcji.
+* Gość: Ograniczony dostęp.
+
+2. Zapis danych:
+* Aplikacja zapisuje informacje o wysłanych wiadomościach, w tym:
+  * Kto wysłał, komu, kiedy i treść wiadomości.
+  * Dane logowania (login, hasło, ew. wskazówka) są przechowywane w formie pliku JSON i są zawsze dostępne dla admina.
+* Aplikacja zapisuje dane ostatnich logowań oraz wszystkie loginy (adminów oraz userów).
+
+3. Rozwijalność:
+* Aplikacja została zaprojektowana z myślą o łatwej rozbudowie.
+* W przypadku dodania nowych funkcji, struktura danych i logiki aplikacji są elastyczne.
