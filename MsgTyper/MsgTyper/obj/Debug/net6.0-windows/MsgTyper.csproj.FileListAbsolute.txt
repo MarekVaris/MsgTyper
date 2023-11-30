@@ -15,3 +15,4 @@ D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\refint\MsgTyper.dl
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.pdb
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.genruntimeconfig.cache
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\ref\MsgTyper.dll
+D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.MainForm.resources
