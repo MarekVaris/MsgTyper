@@ -4,7 +4,6 @@ D:\GitHub\MsgTyper\MsgTyper\MsgTyper\bin\Debug\net6.0-windows\MsgTyper.runtimeco
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\bin\Debug\net6.0-windows\MsgTyper.dll
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\bin\Debug\net6.0-windows\MsgTyper.pdb
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.csproj.AssemblyReference.cache
-D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.Form1.resources
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.csproj.GenerateResource.cache
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.AssemblyInfoInputs.cache
