@@ -21,30 +21,38 @@ namespace MsgTyper
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void Password_TextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void Username_TextBox_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        private void Create_Account_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+        private void Reset_password_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Guest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Quit_Button_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Login_Button_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

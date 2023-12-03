@@ -45,6 +45,7 @@
             Username_TextBox.Name = "Username_TextBox";
             Username_TextBox.Size = new Size(194, 23);
             Username_TextBox.TabIndex = 0;
+            Username_TextBox.TextChanged += Username_TextBox_TextChanged_1;
             // 
             // Username_Label
             // 
@@ -55,7 +56,6 @@
             Username_Label.Size = new Size(63, 15);
             Username_Label.TabIndex = 1;
             Username_Label.Text = "Username:";
-            Username_Label.Click += label1_Click_1;
             // 
             // label1
             // 
@@ -73,6 +73,7 @@
             Password_TextBox.Name = "Password_TextBox";
             Password_TextBox.Size = new Size(194, 23);
             Password_TextBox.TabIndex = 2;
+            Password_TextBox.TextChanged += Password_TextBox_TextChanged;
             // 
             // Login_Button
             // 
@@ -83,7 +84,7 @@
             Login_Button.TabIndex = 4;
             Login_Button.Text = "Login";
             Login_Button.UseVisualStyleBackColor = true;
-            Login_Button.Click += button1_Click;
+            Login_Button.Click += Login_Button_Click;
             // 
             // Create_Account_LinkLabel
             // 
@@ -95,7 +96,7 @@
             Create_Account_LinkLabel.TabIndex = 5;
             Create_Account_LinkLabel.TabStop = true;
             Create_Account_LinkLabel.Text = "Create Account";
-            Create_Account_LinkLabel.LinkClicked += linkLabel1_LinkClicked;
+            Create_Account_LinkLabel.LinkClicked += Create_Account_LinkLabel_LinkClicked;
             // 
             // Guest_LinkLabel
             // 
@@ -107,6 +108,7 @@
             Guest_LinkLabel.TabIndex = 6;
             Guest_LinkLabel.TabStop = true;
             Guest_LinkLabel.Text = "Login as guest";
+            Guest_LinkLabel.LinkClicked += Guest_LinkLabel_LinkClicked;
             // 
             // Reset_password_LinkLabel
             // 
@@ -118,6 +120,7 @@
             Reset_password_LinkLabel.TabIndex = 7;
             Reset_password_LinkLabel.TabStop = true;
             Reset_password_LinkLabel.Text = "Reset password";
+            Reset_password_LinkLabel.LinkClicked += Reset_password_LinkLabel_LinkClicked;
             // 
             // Quit_Button
             // 
@@ -128,6 +131,7 @@
             Quit_Button.TabIndex = 8;
             Quit_Button.Text = "Quit";
             Quit_Button.UseVisualStyleBackColor = true;
+            Quit_Button.Click += Quit_Button_Click;
             // 
             // MainForm
             // 
