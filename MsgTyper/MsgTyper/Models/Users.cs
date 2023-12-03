@@ -53,7 +53,7 @@ namespace MsgTyper.Models
             {
                 Username = username;
                 Password = password;
-                Role = UserRole.Normal;
+                Role = UserRole.Admin;
 
                 Created_in = DateTime.Now;
             }
