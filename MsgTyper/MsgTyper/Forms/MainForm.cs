@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MsgTyper.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,10 @@ namespace MsgTyper
         }
         private void Create_Account_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            CreateUserForm createUserForm = new CreateUserForm();
+            createUserForm.Show();
 
+            this.Close();
         }
         private void Reset_password_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -58,9 +62,13 @@ namespace MsgTyper
 
 
 
-            if (username_input == "" || password_input == "")
+            if (username_input == "")
             {
-                Debug.WriteLine("Wprowadz dane");
+                Debug.WriteLine("Podaj Username");
+            }
+            else if (username_input == "")
+            {
+                Debug.WriteLine("Podaj Password");
             }
             else
             {
@@ -69,5 +77,12 @@ namespace MsgTyper
 
         }
 
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count <= 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
