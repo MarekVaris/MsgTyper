@@ -41,9 +41,10 @@
             // 
             // Username_TextBox
             // 
-            Username_TextBox.Location = new Point(78, 12);
+            Username_TextBox.Location = new Point(145, 26);
+            Username_TextBox.Margin = new Padding(6);
             Username_TextBox.Name = "Username_TextBox";
-            Username_TextBox.Size = new Size(194, 23);
+            Username_TextBox.Size = new Size(357, 39);
             Username_TextBox.TabIndex = 0;
             Username_TextBox.TextChanged += Username_TextBox_TextChanged_1;
             // 
@@ -51,9 +52,10 @@
             // 
             Username_Label.AutoSize = true;
             Username_Label.ImeMode = ImeMode.NoControl;
-            Username_Label.Location = new Point(9, 15);
+            Username_Label.Location = new Point(17, 32);
+            Username_Label.Margin = new Padding(6, 0, 6, 0);
             Username_Label.Name = "Username_Label";
-            Username_Label.Size = new Size(63, 15);
+            Username_Label.Size = new Size(126, 32);
             Username_Label.TabIndex = 1;
             Username_Label.Text = "Username:";
             // 
@@ -61,26 +63,30 @@
             // 
             label1.AutoSize = true;
             label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(12, 44);
+            label1.Location = new Point(22, 94);
+            label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new Size(60, 15);
+            label1.Size = new Size(116, 32);
             label1.TabIndex = 3;
             label1.Text = "Password:";
             // 
             // Password_TextBox
             // 
-            Password_TextBox.Location = new Point(78, 41);
+            Password_TextBox.Location = new Point(145, 87);
+            Password_TextBox.Margin = new Padding(6);
             Password_TextBox.Name = "Password_TextBox";
-            Password_TextBox.Size = new Size(194, 23);
+            Password_TextBox.PasswordChar = '*';
+            Password_TextBox.Size = new Size(357, 39);
             Password_TextBox.TabIndex = 2;
             Password_TextBox.TextChanged += Password_TextBox_TextChanged;
             // 
             // Login_Button
             // 
             Login_Button.ImeMode = ImeMode.NoControl;
-            Login_Button.Location = new Point(197, 126);
+            Login_Button.Location = new Point(366, 269);
+            Login_Button.Margin = new Padding(6);
             Login_Button.Name = "Login_Button";
-            Login_Button.Size = new Size(75, 23);
+            Login_Button.Size = new Size(139, 49);
             Login_Button.TabIndex = 4;
             Login_Button.Text = "Login";
             Login_Button.UseVisualStyleBackColor = true;
@@ -90,9 +96,10 @@
             // 
             Create_Account_LinkLabel.AutoSize = true;
             Create_Account_LinkLabel.ImeMode = ImeMode.NoControl;
-            Create_Account_LinkLabel.Location = new Point(12, 76);
+            Create_Account_LinkLabel.Location = new Point(22, 162);
+            Create_Account_LinkLabel.Margin = new Padding(6, 0, 6, 0);
             Create_Account_LinkLabel.Name = "Create_Account_LinkLabel";
-            Create_Account_LinkLabel.Size = new Size(89, 15);
+            Create_Account_LinkLabel.Size = new Size(177, 32);
             Create_Account_LinkLabel.TabIndex = 5;
             Create_Account_LinkLabel.TabStop = true;
             Create_Account_LinkLabel.Text = "Create Account";
@@ -102,9 +109,10 @@
             // 
             Guest_LinkLabel.AutoSize = true;
             Guest_LinkLabel.ImeMode = ImeMode.NoControl;
-            Guest_LinkLabel.Location = new Point(12, 101);
+            Guest_LinkLabel.Location = new Point(22, 215);
+            Guest_LinkLabel.Margin = new Padding(6, 0, 6, 0);
             Guest_LinkLabel.Name = "Guest_LinkLabel";
-            Guest_LinkLabel.Size = new Size(83, 15);
+            Guest_LinkLabel.Size = new Size(168, 32);
             Guest_LinkLabel.TabIndex = 6;
             Guest_LinkLabel.TabStop = true;
             Guest_LinkLabel.Text = "Login as guest";
@@ -114,9 +122,10 @@
             // 
             Reset_password_LinkLabel.AutoSize = true;
             Reset_password_LinkLabel.ImeMode = ImeMode.NoControl;
-            Reset_password_LinkLabel.Location = new Point(184, 76);
+            Reset_password_LinkLabel.Location = new Point(342, 162);
+            Reset_password_LinkLabel.Margin = new Padding(6, 0, 6, 0);
             Reset_password_LinkLabel.Name = "Reset_password_LinkLabel";
-            Reset_password_LinkLabel.Size = new Size(88, 15);
+            Reset_password_LinkLabel.Size = new Size(177, 32);
             Reset_password_LinkLabel.TabIndex = 7;
             Reset_password_LinkLabel.TabStop = true;
             Reset_password_LinkLabel.Text = "Reset password";
@@ -125,9 +134,10 @@
             // Quit_Button
             // 
             Quit_Button.ImeMode = ImeMode.NoControl;
-            Quit_Button.Location = new Point(9, 126);
+            Quit_Button.Location = new Point(17, 269);
+            Quit_Button.Margin = new Padding(6);
             Quit_Button.Name = "Quit_Button";
-            Quit_Button.Size = new Size(75, 23);
+            Quit_Button.Size = new Size(139, 49);
             Quit_Button.TabIndex = 8;
             Quit_Button.Text = "Quit";
             Quit_Button.UseVisualStyleBackColor = true;
@@ -135,9 +145,9 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(284, 161);
+            ClientSize = new Size(527, 343);
             Controls.Add(Quit_Button);
             Controls.Add(Reset_password_LinkLabel);
             Controls.Add(Guest_LinkLabel);
@@ -148,6 +158,7 @@
             Controls.Add(Username_Label);
             Controls.Add(Username_TextBox);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(6);
             MinimizeBox = false;
             Name = "MainForm";
             Text = "MainForm";
