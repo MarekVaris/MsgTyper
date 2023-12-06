@@ -15,9 +15,7 @@ namespace MsgTyper.Models
             private string username;
             private string password;
             private UserRole role;
-            public DateTime Created_in { get; set; }
-
-
+            
             // Encapsulation: properties to access fields
             public string Username
             {
@@ -37,6 +35,7 @@ namespace MsgTyper.Models
                 set { role = value; }
             }
 
+            public DateTime Created_in { get; set; }
             // Polymorphism: virtual method
             public virtual string GetWelcomeMessage()
             {
@@ -70,7 +69,7 @@ namespace MsgTyper.Models
                 Username = username;
                 Password = password;
                 Role = UserRole.Normal;
-                Created_in = DateTime.Today;
+                Created_in = DateTime.Now;
             }
         }
 
