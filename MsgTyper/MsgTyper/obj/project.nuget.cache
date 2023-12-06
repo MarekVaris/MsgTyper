@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gNut/yQ6ewWZ+Ybl+WRASadePxaUsG1RY8KYQXOEUrrLSSg/iQlcnTAkzouif6MKx7aXq+CMJDW9CJLKFz3P7g==",
+  "dgSpecHash": "m52riWTbbTdZ/c23kkfmqfzXYArEy0tbPtuAMRQsUgyG+xKc4wqfR0DoLJq9M3lg57TGxNmEmH5q6EcTd/WMYw==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\MsgTyper\\MsgTyper\\MsgTyper\\MsgTyper.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marek\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

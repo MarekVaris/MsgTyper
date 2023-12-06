@@ -52,7 +52,7 @@ namespace MsgTyper
 
         private void Quit_Button_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void Login_Button_Click(object sender, EventArgs e)
