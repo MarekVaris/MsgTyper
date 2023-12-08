@@ -35,14 +35,16 @@ namespace MsgTyper
         }
         private void Create_Account_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CreateUserForm createUserForm = new CreateUserForm();
-            createUserForm.Show();
-
-            this.Close();
+            CreateUserForm create_user = new CreateUserForm();
+            this.Hide();
+            create_user.ShowDialog(this);
         }
         private void Reset_password_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            ResetPassword reset_password = new ResetPassword();
+            this.Hide();
+            reset_password.ShowDialog(this);
+            
         }
 
         private void Guest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,24 +59,13 @@ namespace MsgTyper
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            string username_input = Username_TextBox.Text;
-            string password_input = Password_TextBox.Text;
 
-
-
-            if (username_input == "")
-            {
-                Debug.WriteLine("Podaj Username");
-            }
-            else if (username_input == "")
-            {
-                Debug.WriteLine("Podaj Password");
-            }
+            if (string.IsNullOrEmpty(Username_TextBox.Text)) MessageBox.Show("Please enter your username.");
+            else if (string.IsNullOrEmpty(Password_TextBox.Text)) MessageBox.Show("Please enter your password.");
             else
             {
-                Debug.WriteLine(username_input);
+                Debug.Write(Username_TextBox.Text);
             }
-
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -17,7 +17,7 @@ namespace MsgTyper.Forms
 
         private void CreateUserForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Create_Username_TextBox_TextChanged(object sender, EventArgs e)
@@ -51,11 +51,25 @@ namespace MsgTyper.Forms
                 {
                     if (Create_Password_TextBox.Text == Create_Password2_TextBox.Text)
                     {
-                        Users.CreateNormal(Create_Username_TextBox.Text, Create_Password_TextBox.Text);
-                        MainForm mainForm = new MainForm();
-                        mainForm.Show();
+                        Users.User[] allUsers = Users.LoadJson();
+                        bool user_exist = false;
 
-                        this.Close();
+                        foreach (Users.User user in allUsers)
+                        {
+                            if (user.Username == Create_Username_TextBox.Text)
+                            {
+                                user_exist = true;
+                                MessageBox.Show($"Usersame: {user.Username} already exists.");
+                                break;
+                            }
+                        }
+                        if (!user_exist)
+                        {
+                            Users.CreateNormal(Create_Username_TextBox.Text, Create_Password_TextBox.Text);
+                            Owner.Show();
+                            this.Close();
+                        }
+
                     }
                     else MessageBox.Show("Confirm that password the same.");
                 }
@@ -68,16 +82,13 @@ namespace MsgTyper.Forms
 
         private void Create_Back_Button_Click(object sender, EventArgs e)
         {
-
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
-
+            Owner.Show();
             this.Close();
         }
 
         private void CreateUserForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms.Count <= 0)
+            if (Owner.Visible == false)
             {
                 Application.Exit();
             }

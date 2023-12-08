@@ -78,6 +78,7 @@
             // 
             Create_Password_TextBox.Location = new Point(177, 70);
             Create_Password_TextBox.Name = "Create_Password_TextBox";
+            Create_Password_TextBox.PasswordChar = '*';
             Create_Password_TextBox.Size = new Size(143, 23);
             Create_Password_TextBox.TabIndex = 4;
             Create_Password_TextBox.TextChanged += Create_Password_TextBox_TextChanged;
@@ -86,6 +87,7 @@
             // 
             Create_Password2_TextBox.Location = new Point(177, 104);
             Create_Password2_TextBox.Name = "Create_Password2_TextBox";
+            Create_Password2_TextBox.PasswordChar = '*';
             Create_Password2_TextBox.Size = new Size(143, 23);
             Create_Password2_TextBox.TabIndex = 5;
             Create_Password2_TextBox.TextChanged += Create_Password2_TextBox_TextChanged;
@@ -136,6 +138,7 @@
             Controls.Add(Create_Password_Label);
             Controls.Add(Create_Username_Label);
             Name = "CreateUserForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "CreateUserForm";
             FormClosed += CreateUserForm_FormClosed;
             Load += CreateUserForm_Load;

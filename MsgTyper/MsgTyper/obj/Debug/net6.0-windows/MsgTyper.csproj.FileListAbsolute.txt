@@ -34,3 +34,4 @@ C:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\ref\MsgTyper.dll
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.Forms.CreateUserForm.resources
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.csproj.CopyComplete
+D:\GitHub\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.Forms.ResetPassword.resources

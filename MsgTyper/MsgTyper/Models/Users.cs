@@ -36,6 +36,7 @@ namespace MsgTyper.Models
             }
 
             public DateTime Created_in { get; set; }
+
             // Polymorphism: virtual method
             public virtual string GetWelcomeMessage()
             {
@@ -45,8 +46,6 @@ namespace MsgTyper.Models
 
         public class AdminUser : User
         {
-            private string password;
-
 
             // Inheritance
             public AdminUser(string username, string password)
@@ -54,7 +53,6 @@ namespace MsgTyper.Models
                 Username = username;
                 Password = password;
                 Role = UserRole.Admin;
-
                 Created_in = DateTime.Now;
             }
 
@@ -75,12 +73,12 @@ namespace MsgTyper.Models
 
         public class Guest : User
         {
+            // Inheritance
             public Guest(string username)
             {
                 Username = username;
                 Password = "pass";
                 Role = UserRole.Guest;
-
                 Created_in = DateTime.Now;
             }
         }
@@ -88,9 +86,9 @@ namespace MsgTyper.Models
         // Enumeration for classes
         public enum UserRole
         {
-            Guest,
-            Admin,
-            Normal
+            Admin = 1,
+            Normal,
+            Guest
         }
 
 
@@ -101,7 +99,17 @@ namespace MsgTyper.Models
             {
                 string json = File.ReadAllText("users.json");
                 User[] users = JsonConvert.DeserializeObject<User[]>(json);
+                if (users == null || users.Length == 0)
+                {
+                    // Creating a default AdminUser for demonstration
 
+                    User[] defaultUsers = { new AdminUser("admin", "admin") };
+                    string defaultJson = JsonConvert.SerializeObject(defaultUsers, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText("users.json", defaultJson);
+
+                    // Returning the default user
+                    return defaultUsers;
+                }
                 return users;
             }
             catch
