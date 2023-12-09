@@ -71,7 +71,7 @@ namespace MsgTyper.Forms
                         }
 
                     }
-                    else MessageBox.Show("Confirm that password the same.");
+                    else MessageBox.Show("Confirm that password is the same.");
                 }
             }
             else

@@ -92,6 +92,12 @@ namespace MsgTyper.Models
         }
 
 
+        public static void SaveJson(User[] users_list )
+        {
+            string default_json = JsonConvert.SerializeObject(users_list, Newtonsoft.Json.Formatting.Indented);
+            File.WriteAllText("users.json", default_json);
+        }
+
         public static User[] LoadJson()
         {
             // Trying to load the data json
@@ -103,12 +109,12 @@ namespace MsgTyper.Models
                 {
                     // Creating a default AdminUser for demonstration
 
-                    User[] defaultUsers = { new AdminUser("admin", "admin") };
-                    string defaultJson = JsonConvert.SerializeObject(defaultUsers, Newtonsoft.Json.Formatting.Indented);
-                    File.WriteAllText("users.json", defaultJson);
+                    User[] default_admin = { new AdminUser("admin", "admin") };
+
+                    SaveJson(default_admin);
 
                     // Returning the default user
-                    return defaultUsers;
+                    return default_admin;
                 }
                 return users;
             }
@@ -117,13 +123,12 @@ namespace MsgTyper.Models
                 MessageBox.Show("Failed to load the file, creating a new file");
 
                 // Creating a default AdminUser for demonstration
-                User[] defaultUsers = { new AdminUser("admin", "admin") };
+                User[] default_admin = { new AdminUser("admin", "admin") };
 
-                string defaultJson = JsonConvert.SerializeObject(defaultUsers, Newtonsoft.Json.Formatting.Indented);
-                File.WriteAllText("users.json", defaultJson);
+                SaveJson(default_admin);
 
                 // Returning the default user
-                return defaultUsers;
+                return default_admin;
             }
         }
 
@@ -145,6 +150,21 @@ namespace MsgTyper.Models
             File.WriteAllText("users.json", updatedJson);
 
             MessageBox.Show("New accout has been created.");
+        }
+
+        public static void ResetPassword(string username, string password)
+        {
+            User[] all_users = LoadJson();
+
+            foreach (User user in all_users)
+            {
+                if (user.Username == username)
+                {
+                    user.Password = password;
+                    SaveJson(all_users);
+                    MessageBox.Show($"User: {username} password has been changed");
+                }
+            }
         }
         
     }
