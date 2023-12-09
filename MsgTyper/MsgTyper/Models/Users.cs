@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml;
 using Newtonsoft.Json;
+using System.Diagnostics;
+using static MsgTyper.Models.Users;
 
 namespace MsgTyper.Models
 {
@@ -11,6 +13,7 @@ namespace MsgTyper.Models
     {
         public class User
         {
+            
             // Encapsulation: private fields
             private string username;
             private string password;
@@ -35,7 +38,7 @@ namespace MsgTyper.Models
                 set { role = value; }
             }
 
-            public DateTime Created_in { get; set; }
+            public string Created_in { get; set; }
 
             // Polymorphism: virtual method
             public virtual string GetWelcomeMessage()
@@ -46,40 +49,42 @@ namespace MsgTyper.Models
 
         public class AdminUser : User
         {
-
+            private DateTime dateTime = DateTime.Now;
             // Inheritance
             public AdminUser(string username, string password)
             {
                 Username = username;
                 Password = password;
                 Role = UserRole.Admin;
-                Created_in = DateTime.Now;
+                Created_in = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
             }
 
         }
 
         public class NormalUser : User
         {
-
+            private DateTime dateTime = DateTime.Now;
             // Inheritance
             public NormalUser(string username, string password)
             {
                 Username = username;
                 Password = password;
                 Role = UserRole.Normal;
-                Created_in = DateTime.Now;
+                Created_in = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
             }
         }
 
         public class Guest : User
         {
+            private DateTime dateTime = DateTime.Now;
             // Inheritance
-            public Guest(string username)
+            public Guest()
             {
-                Username = username;
+                Username = dateTime.ToString("yyyyddss");
+                Username = "Guest_"+Username;
                 Password = "pass";
                 Role = UserRole.Guest;
-                Created_in = DateTime.Now;
+                Created_in = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
             }
         }
 
@@ -136,20 +141,34 @@ namespace MsgTyper.Models
         {
 
             // Load users from JSON
-            User[] existingUsers = LoadJson();
+            User[] all_users = LoadJson();
 
             // Create a new user (replace "newUser" with actual data)
-            NormalUser newUser = new NormalUser(username, password);
+            NormalUser new_user = new NormalUser(username, password);
 
             // Add the new user to the existing users array
-            Array.Resize(ref existingUsers, existingUsers.Length + 1);
-            existingUsers[existingUsers.Length - 1] = newUser;
+            Array.Resize(ref all_users, all_users.Length + 1);
+            all_users[all_users.Length - 1] = new_user;
 
             // Save the updated users array back to JSON
-            string updatedJson = JsonConvert.SerializeObject(existingUsers, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText("users.json", updatedJson);
+            SaveJson(all_users);
 
             MessageBox.Show("New accout has been created.");
+        }
+
+        public static void CreateGuest() 
+        {
+            User[] all_users = LoadJson();
+
+            Guest new_user = new Guest();
+
+            // Add the new user to the existing users array
+            Array.Resize(ref all_users, all_users.Length + 1);
+            all_users[all_users.Length - 1] = new_user;
+
+            // Save the updated users array back to JSON
+            SaveJson(all_users);
+
         }
 
         public static void ResetPassword(string username, string password)

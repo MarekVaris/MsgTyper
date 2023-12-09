@@ -1,4 +1,5 @@
 ﻿using MsgTyper.Forms;
+using MsgTyper.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,7 +50,7 @@ namespace MsgTyper
 
         private void Guest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Users.CreateGuest();
         }
 
         private void Quit_Button_Click(object sender, EventArgs e)
