@@ -62,6 +62,8 @@ namespace MsgTyper
             Users.CreateGuest();
             UserScreen user_screen = new UserScreen();
             Debug.Write(Username_TextBox.Text);
+            string Now = Users.SendLastGuestName();
+            MessageBox.Show($"User: {Now}");
             this.Hide();
             user_screen.ShowDialog(this);
         }

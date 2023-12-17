@@ -6,39 +6,9 @@
     "Created_in": "2023-12-09 17:43:46"
   },
   {
-    "Username": "Guest_20230946",
-    "Password": "qwe",
-    "Role": 3,
-    "Created_in": "2023-12-09 17:43:46"
-  },
-  {
     "Username": "qwe",
     "Password": "zxcasd",
     "Role": 2,
     "Created_in": "2023-12-09 17:46:12"
-  },
-  {
-    "Username": null,
-    "Password": null,
-    "Role": 0,
-    "Created_in": null
-  },
-  {
-    "Username": "Guest_20231746",
-    "Password": "pass",
-    "Role": 3,
-    "Created_in": "2023-12-17 13:23:46"
-  },
-  {
-    "Username": "Guest_20231752",
-    "Password": "pass",
-    "Role": 3,
-    "Created_in": "2023-12-17 13:23:52"
-  },
-  {
-    "Username": "Guest_20231738",
-    "Password": "pass",
-    "Role": 3,
-    "Created_in": "2023-12-17 14:03:38"
   }
 ]

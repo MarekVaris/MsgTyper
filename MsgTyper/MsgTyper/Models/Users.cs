@@ -6,6 +6,9 @@ using System.Xml;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using static MsgTyper.Models.Users;
+using System.Runtime.CompilerServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace MsgTyper.Models
 {
@@ -199,6 +202,36 @@ namespace MsgTyper.Models
                 }
             }
             return false;
+        }
+
+        public static string SendLastGuestName()
+        {
+            User userr = new User();
+            User[] all_users = LoadJson();
+
+            foreach (User user in all_users)
+            {
+                if (user.Role is (UserRole)3)
+                {
+                    userr = user;
+                }
+            }
+            return userr.Username;
+        }
+
+        public static string SendUserName(string username)
+        {
+            User userr = new User();
+            User[] all_users = LoadJson();
+
+            foreach (User user in all_users)
+            {
+                if (user.Username == username)
+                {
+                    userr = user;
+                }
+            }
+            return userr.Username;
         }
 
     }
