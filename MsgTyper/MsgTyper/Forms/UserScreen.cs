@@ -13,14 +13,37 @@ namespace MsgTyper.Forms
 {
     public partial class UserScreen : Form
     {
+        private string V = "dwa213wadded";
+
+
         public UserScreen()
         {
             InitializeComponent();
         }
 
+        private void UserItems()
+        {
+            UserDataLoad[] userdataloads = new UserDataLoad[20];
+
+            for (int i = 0; i < userdataloads.Length; i++)
+            {
+                userdataloads[i] = new UserDataLoad();
+                userdataloads[i].User_Name = V;
+                userdataloads[i].Message_Send = V;
+                /*
+                if (flowLayoutPanel1.Controls.Count > 0)
+                {
+                    flowLayoutPanel1.Controls.Clear();
+                }
+                else
+                    */
+                flowLayoutPanel1.Controls.Add(userdataloads[i]);
+            }
+        }
+
         private void UserScreen_Load(object sender, EventArgs e)
         {
-
+            UserItems();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -48,6 +71,9 @@ namespace MsgTyper.Forms
             }
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

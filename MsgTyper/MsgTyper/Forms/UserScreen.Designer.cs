@@ -29,18 +29,30 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             Quit_Button = new Button();
             Log_Out = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(flowLayoutPanel1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(493, 360);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(493, 360);
+            flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
             // Quit_Button
             // 
@@ -68,13 +80,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(493, 404);
-            Controls.Add(Log_Out);
             Controls.Add(Quit_Button);
+            Controls.Add(Log_Out);
             Controls.Add(panel1);
             Name = "UserScreen";
             StartPosition = FormStartPosition.CenterParent;
             Text = "UserScreen";
             Load += UserScreen_Load;
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -83,5 +96,6 @@
         private Panel panel1;
         private Button Quit_Button;
         private Button Log_Out;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

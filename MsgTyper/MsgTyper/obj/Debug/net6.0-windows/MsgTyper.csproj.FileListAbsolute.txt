@@ -58,3 +58,4 @@ C:\Users\tomek\Desktop\Studia\gitdesc\obiektowe\MSG\MsgTyper\MsgTyper\MsgTyper\o
 C:\Users\tomek\Desktop\Studia\gitdesc\obiektowe\MSG\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.pdb
 C:\Users\tomek\Desktop\Studia\gitdesc\obiektowe\MSG\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.genruntimeconfig.cache
 C:\Users\tomek\Desktop\Studia\gitdesc\obiektowe\MSG\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\ref\MsgTyper.dll
+C:\Users\tomek\Desktop\Studia\gitdesc\obiektowe\MSG\MsgTyper\MsgTyper\MsgTyper\obj\Debug\net6.0-windows\MsgTyper.Forms.UserDataLoad.resources
