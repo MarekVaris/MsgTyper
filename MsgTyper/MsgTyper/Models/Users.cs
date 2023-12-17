@@ -13,7 +13,7 @@ namespace MsgTyper.Models
     {
         public class User
         {
-            
+
             // Encapsulation: private fields
             private string username;
             private string password;
@@ -76,6 +76,7 @@ namespace MsgTyper.Models
 
         public class Guest : User
         {
+
             private DateTime dateTime = DateTime.Now;
             // Inheritance
             public Guest()
@@ -185,6 +186,20 @@ namespace MsgTyper.Models
                 }
             }
         }
-        
+        // Validate Password and Login
+        public static bool PasswordLogin(string username, string password)
+        {
+            User[] all_users = LoadJson();
+
+            foreach (User user in all_users)
+            {
+                if (user.Username == username & user.Password == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
