@@ -86,6 +86,7 @@
             Name = "UserScreen";
             StartPosition = FormStartPosition.CenterParent;
             Text = "UserScreen";
+            FormClosed += UserScreen_FormClosed;
             Load += UserScreen_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);

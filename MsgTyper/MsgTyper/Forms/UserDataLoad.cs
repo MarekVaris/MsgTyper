@@ -18,9 +18,11 @@ namespace MsgTyper.Forms
             InitializeComponent();
         }
 
+        //Private fields user data
         private string _name;
         private string _message;
 
+        //Custom property for accessing and setting the user's name
         [Category("custom Props")]
         public string User_Name
         {
@@ -28,12 +30,14 @@ namespace MsgTyper.Forms
             set { _name = value; UserName.Text = value; }
         }
 
+        //Custom property for accessing and setting the message sent by the user
         [Category("custom Props")]
         public string Message_Send
         {
             get { return _message; }
             set { _message = value; MessageSend.Text = value; }
         }
+        //Event handler for the UserControl's load event
         private void UserDataLoad_Load(object sender, EventArgs e)
         {
 

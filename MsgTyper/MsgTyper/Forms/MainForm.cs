@@ -41,6 +41,7 @@ namespace MsgTyper
         {
             login = Username_TextBox.Text;
         }
+        //Click action
         private void Create_Account_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Point currentLocation = this.Location;
@@ -49,6 +50,7 @@ namespace MsgTyper
             create_user.ShowDialog(this);
             create_user.Location = currentLocation;
         }
+        //Click action
         private void Reset_password_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ResetPassword reset_password = new ResetPassword();
@@ -56,23 +58,23 @@ namespace MsgTyper
             reset_password.ShowDialog(this);
             
         }
-
+        //Click action
         private void Guest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Users.CreateGuest();
-            UserScreen user_screen = new UserScreen();
+            UserScreen user_screen = new UserScreen(login);
             Debug.Write(Username_TextBox.Text);
             string Now = Users.SendLastGuestName();
             MessageBox.Show($"User: {Now}");
             this.Hide();
             user_screen.ShowDialog(this);
         }
-
+        //Click action 
         private void Quit_Button_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //Data validation + response 
         private void Login_Button_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Username_TextBox.Text)) MessageBox.Show("Please enter your username.");
@@ -81,7 +83,7 @@ namespace MsgTyper
             {
                 if (Users.PasswordLogin(login, password) == true)
                 {
-                    UserScreen user_screen = new UserScreen();
+                    UserScreen user_screen = new UserScreen(login);
                     Debug.Write(Username_TextBox.Text);
                     this.Hide();
                     user_screen.ShowDialog(this);

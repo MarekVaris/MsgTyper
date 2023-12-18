@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MsgTyper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12776333c81d80db92891d24ef75747cde1893e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d00baa343f7b69aa6bdec50da8f92a6819b0e666")]
 [assembly: System.Reflection.AssemblyProductAttribute("MsgTyper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MsgTyper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

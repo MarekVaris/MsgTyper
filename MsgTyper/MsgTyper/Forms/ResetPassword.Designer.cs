@@ -127,6 +127,7 @@
             Name = "ResetPassword";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ResetPassword";
+            FormClosed += ResetPassword_FormClosed;
             Load += ResetPassword_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -50,7 +50,7 @@
             UserName.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             UserName.Location = new Point(0, 0);
             UserName.Name = "UserName";
-            UserName.Size = new Size(498, 39);
+            UserName.Size = new Size(485, 39);
             UserName.TabIndex = 0;
             UserName.Text = "label1";
             // 
@@ -59,7 +59,7 @@
             MessageSend.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MessageSend.Location = new Point(0, 39);
             MessageSend.Name = "MessageSend";
-            MessageSend.Size = new Size(498, 62);
+            MessageSend.Size = new Size(485, 62);
             MessageSend.TabIndex = 1;
             MessageSend.Text = "label2";
             // 
@@ -70,7 +70,7 @@
             Controls.Add(MessageSend);
             Controls.Add(panel1);
             Name = "UserDataLoad";
-            Size = new Size(498, 101);
+            Size = new Size(485, 101);
             Load += UserDataLoad_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);

@@ -76,5 +76,13 @@ namespace MsgTyper.Forms
                 else MessageBox.Show("Confirm that password is the same.");
             }
         }
+
+        private void ResetPassword_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Owner.Visible == false)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
