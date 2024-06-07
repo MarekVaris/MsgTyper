@@ -1,18 +1,19 @@
 # MsgTyper
 
-Prosta aplikacja do wysyłania wiadomości z użyciem interfejsu użytkownika w technologii Windows Forms. Aplikacja obejmuje:
+Simple Messaging Application using Windows Forms
 
-1. Zabezpieczenia na poziomie loginu:
-* Admin: Pełen dostęp do funkcji aplikacji.
-* Użytkownik: Dostęp do podstawowych funkcji.
-* Gość: Ograniczony dostęp.
+1. **Login Level Security:**
+   * **Admin:** Full access to application features.
+   * **User:** Access to basic features.
+   * **Guest:** Limited access.
 
-2. Zapis danych:
-* Aplikacja zapisuje informacje o wysłanych wiadomościach, w tym:
-  * Kto wysłał, komu, kiedy i treść wiadomości.
-  * Dane logowania (login, hasło, ew. wskazówka) są przechowywane w formie pliku JSON i są zawsze dostępne dla admina.
-* Aplikacja zapisuje dane ostatnich logowań oraz wszystkie loginy (adminów oraz userów).
+2. **Data Storage:**
+   * The application saves information about sent messages, including:
+     * Who sent it, to whom, when, and the message content.
+   * Login data (login, password, optional hint) are stored in a JSON file and are always accessible to the admin.
+   * The application saves the data of recent logins and all logins (both admins and users).
 
-3. Rozwijalność:
-* Aplikacja została zaprojektowana z myślą o łatwej rozbudowie.
-* W przypadku dodania nowych funkcji, struktura danych i logiki aplikacji są elastyczne.
+3. **Scalability:**
+   * The application is designed with easy expansion in mind.
+   * In the event of adding new features, the data structure and application logic are flexible.
+
